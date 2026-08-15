@@ -12,12 +12,37 @@
 </p>
 
 ---
-
 ## 🚀 Live Demo
 
-**Live Application:** Coming Soon
+### 🌐 Live Application
 
-> The live application will provide access to the complete interactive platform while the production source code remains privately maintained.
+[![Open Live Application](https://img.shields.io/badge/🚀%20Open-Live%20Application-brightgreen?style=for-the-badge)](https://enterprise-data-intelligence-platform.streamlit.app/)
+
+**Live Application:**  
+https://enterprise-data-intelligence-platform.streamlit.app/
+
+> The live application is publicly accessible through Streamlit Community Cloud. The production source code remains privately maintained, while this repository provides the public project showcase, architecture, documentation, screenshots, and technical overview.
+
+### 🔒 Source Code Policy
+
+The application is deployed from a private source repository.
+
+The following remain private:
+
+- Production source code
+- Internal ML implementation
+- Model artifacts
+- Private datasets
+- Internal configuration
+- Credentials and secrets
+
+The public showcase repository contains the project documentation and demonstration materials.
+
+**Public Showcase Repository:**  
+https://github.com/pratimmatrix/enterprise-data-intelligence-platform-showcase
+
+**Private Source Repository:**  
+Not publicly accessible.
 
 ---
 
