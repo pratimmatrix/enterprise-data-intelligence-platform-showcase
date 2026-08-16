@@ -1,4 +1,3 @@
-
 # Enterprise Data Intelligence Platform — Platform Modules
 
 ## Overview
