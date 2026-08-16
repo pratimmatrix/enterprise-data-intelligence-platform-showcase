@@ -1,4 +1,3 @@
-
 # Enterprise Data Intelligence Platform — System Overview
 
 ## Overview
@@ -172,4 +171,3 @@ Governed Predictions
       ↓
 Explainable Decisions
 ```
-
