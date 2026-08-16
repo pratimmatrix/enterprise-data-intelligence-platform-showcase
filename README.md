@@ -1,673 +1,639 @@
 # Enterprise Data Intelligence Platform
 
-> An end-to-end data intelligence and machine learning governance platform for validating enterprise data, discovering anomalies, monitoring schema changes, engineering ML features, evaluating models, supporting adaptive retraining, and delivering explainable predictions.
+> **Adaptive Enterprise Data Intelligence • Schema Drift • Multi-Model Learning • Governance • Explainable AI**
 
 <p align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange.svg)](https://scikit-learn.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-Project-black.svg)](https://github.com/pratimmatrix)
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-red.svg)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange.svg)
+![GitHub](https://img.shields.io/badge/GitHub-Private_Source-black.svg)
+![License](https://img.shields.io/badge/Status-Active-success.svg)
 
 </p>
 
 ---
+
 ## 🚀 Live Demo
 
-### 🌐 Live Application
+### 🌐 Production Application
 
-[![Open Live Application](https://img.shields.io/badge/🚀%20Open-Live%20Application-brightgreen?style=for-the-badge)](https://enterprise-data-intelligence-platform.streamlit.app/)
+**Live Application**
 
-**Live Application:**  
 https://enterprise-data-intelligence-platform.streamlit.app/
 
-> The live application is publicly accessible through Streamlit Community Cloud. The production source code remains privately maintained, while this repository provides the public project showcase, architecture, documentation, screenshots, and technical overview.
-
-### 🔒 Source Code Policy
-
-The application is deployed from a private source repository.
-
-The following remain private:
-
-- Production source code
-- Internal ML implementation
-- Model artifacts
-- Private datasets
-- Internal configuration
-- Credentials and secrets
-
-The public showcase repository contains the project documentation and demonstration materials.
-
-**Public Showcase Repository:**  
-https://github.com/pratimmatrix/enterprise-data-intelligence-platform-showcase
-
-**Private Source Repository:**  
-Not publicly accessible.
+> The production application is deployed through **Streamlit Community Cloud** from a **private GitHub source repository**. This public repository serves as the complete showcase, documentation, architecture reference, screenshots, and project portfolio.
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-The **Enterprise Data Intelligence Platform** is an end-to-end data and machine learning platform designed to demonstrate how enterprise data can move through a complete intelligence lifecycle.
+Enterprise Data Intelligence Platform is an **end-to-end adaptive machine learning system** designed to demonstrate how enterprise data moves through an entire intelligence lifecycle—from ingestion and validation to governance, retraining, and explainable prediction.
 
-The platform combines data quality validation, data profiling, anomaly detection, schema monitoring, feature engineering, machine learning model evaluation, adaptive retraining, governance, real-time inference, and explainability into one unified interface.
+Unlike traditional ML dashboards that only generate predictions, this platform continuously evaluates **data quality, schema evolution, feature engineering, model performance, governance rules, and business explainability** inside one unified interface.
+
+---
+
+# ✨ What's New (Version 2)
+
+## Adaptive Dataset Intelligence
+
+* Download the original **bank-full.csv** baseline dataset
+* Upload a completely new enterprise CSV
+* The uploaded CSV becomes the **active analysis dataset**
+* Every report automatically refreshes using the uploaded dataset
+* Reset instantly to the original production baseline
+
+## Enterprise Schema Drift
+
+Detects:
+
+* Added columns
+* Removed columns
+* Modified column types
+* Preserved columns
+* Unseen categorical values
+* Dataset version changes
+
+## Defensive Machine Learning
+
+The platform refuses to predict when:
+
+* Dataset is unrelated
+* Required target is missing
+* Schema is incompatible
+* Data quality is insufficient
+
+Instead of generating unreliable predictions, the platform returns a **Safe Rejection Report**.
+
+---
+
+# 🏗️ Enterprise Architecture
 
 ```text
-Raw Enterprise Data
-        ↓
-Data Validation
-        ↓
-Deep Data Profiling
-        ↓
-Anomaly Intelligence
-        ↓
-Schema Drift Monitoring
-        ↓
-Feature Engineering
-        ↓
-Model Evaluation
-        ↓
-Adaptive Retraining
-        ↓
-Model Governance
-        ↓
-Real-Time Inference
-        ↓
-Explainability
-        ↓
-Business Decision
+                    ENTERPRISE DATA
+                           │
+                           ▼
+               📂 1. Ingestion & Pre-Flight
+                           │
+                           ▼
+               📊 2. Deep Data Profiling
+                           │
+                           ▼
+               🔍 3. Anomaly Intelligence
+                           │
+                           ▼
+               🧬 4. Schema Drift & Registry
+                           │
+                           ▼
+               ⚙️ 5. Feature Engineering Studio
+                           │
+                           ▼
+          🚀 6. Adaptive Retraining & Governance
+                           │
+                           ▼
+      🔮 7. Real-Time Inference & Explainability
+                           │
+                           ▼
+                  📈 Business Decision
 ```
 
 ---
 
-# 🎯 Why Was This Project Built?
+# 🎯 Why This Project Exists
 
-Real-world machine learning systems require much more than simply training a model.
+Enterprise AI systems fail more often because of **bad data** than bad algorithms.
 
-Before a model can reliably produce predictions, organizations need to understand:
+Before deploying a model, organizations must answer questions such as:
 
-- Is the incoming data valid?
-- What does the dataset contain?
-- Are there missing or inconsistent values?
-- Are there duplicate records?
-- Are there unusual observations?
-- Has the dataset structure changed?
-- Are the features suitable for machine learning?
-- Which model performs best?
-- When should a model be retrained?
-- Can the prediction be explained?
-- How can model output support a business decision?
+* Is the incoming dataset valid?
+* Has the schema changed?
+* Are there anomalies?
+* Can features still be engineered?
+* Is retraining necessary?
+* Is the new model actually better?
+* Can every prediction be explained?
 
-This project was built to demonstrate how these activities can be connected into a single enterprise-oriented workflow.
-
----
-
-# 🏗️ Platform Architecture
-
-```text
-                    ┌──────────────────────┐
-                    │   Enterprise Data    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 1. Ingestion &       │
-                    │    Pre-Flight        │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 2. Deep Data         │
-                    │    Profiling         │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 3. Anomaly           │
-                    │    Intelligence      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 4. Schema Drift &    │
-                    │    Registry          │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 5. Feature           │
-                    │    Engineering       │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 6. Adaptive          │
-                    │    Retraining &      │
-                    │    Governance        │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ 7. Real-Time         │
-                    │    Inference &       │
-                    │    Explainability    │
-                    └──────────────────────┘
-```
+This platform was built to answer all of those questions inside one production-style workflow.
 
 ---
 
 # 🔥 Core Platform Modules
 
-## 1. 📂 Ingestion & Pre-Flight
+## 📂 1. Ingestion & Pre-Flight
 
-The ingestion layer is the first validation boundary between raw enterprise data and the machine learning workflow.
+First validation boundary between enterprise data and machine learning.
 
 ### Responsibilities
 
-- Dataset ingestion
-- File and structure validation
-- Data-type inspection
-- Missing-value analysis
-- Duplicate detection
-- Basic integrity checks
-- Initial data-quality assessment
+* CSV ingestion
+* Automatic delimiter detection
+* Missing-value analysis
+* Duplicate detection
+* Data type validation
+* Initial quality scoring
+* Download production dataset
+* Upload candidate dataset
 
-### Why is it useful?
+### Enterprise Capability
 
-Poor-quality input data can propagate errors throughout the entire machine learning pipeline.
-
-The ingestion layer helps identify basic data-quality problems before they reach downstream processing.
-
----
-
-# 2. 📊 Deep Data Profiling
-
-The Deep Data Profiling module provides a detailed understanding of the incoming dataset.
-
-### It examines
-
-- Dataset dimensions
-- Numeric variables
-- Categorical variables
-- Summary statistics
-- Distributions
-- Missingness
-- Feature characteristics
-
-### Why is it useful?
-
-Data scientists and engineers need to understand the structure and characteristics of data before building reliable machine learning pipelines.
+* Candidate dataset becomes active immediately
+* Original production dataset remains preserved
+* One-click **Reset to Default**
 
 ---
 
-# 3. 🔍 Anomaly Intelligence
+## 📊 2. Deep Data Profiling
 
-The Anomaly Intelligence module identifies statistically unusual observations in the dataset.
+Transforms raw data into actionable intelligence.
 
-### Example techniques
+### Includes
 
-- IQR-based detection
-- Z-score analysis
-- Distribution analysis
-- Statistical summaries
-
-### Important principle
-
-An anomaly does **not automatically mean that a record is incorrect**.
-
-An unusual transaction, customer, measurement, or event may be completely legitimate.
-
-Therefore, anomaly detection should support investigation and decision-making rather than blindly deleting records.
+* Dataset dimensions
+* Numeric profiling
+* Categorical profiling
+* Statistical summaries
+* Missingness visualization
+* Correlation analysis
+* Semantic analysis
+* Quality score generation
 
 ---
 
-# 4. 🧬 Schema Drift & Registry
+## 🔍 3. Anomaly Intelligence
 
-Enterprise datasets can change over time.
+Enterprise anomaly investigation engine.
 
-For example:
+### Techniques
+
+* IQR Detection
+* Distribution Analysis
+* Outlier Ranking
+* Contamination Ratio
+* Statistical Boundaries
+
+> An anomaly is treated as an investigation signal—not automatic bad data.
+
+---
+
+## 🧬 4. Schema Drift & Registry
+
+Automatically compares every uploaded dataset with the approved production schema.
+
+### Detects
+
+| Drift Type        | Supported |
+| ----------------- | --------- |
+| Added Columns     | ✅         |
+| Removed Columns   | ✅         |
+| Modified Types    | ✅         |
+| Preserved Columns | ✅         |
+| Unseen Categories | ✅         |
+| Dataset Version   | ✅         |
+
+### Example
 
 ```text
-customer_id
-balance
+Production Schema
+-----------------
 age
-```
-
-may become:
-
-```text
-customer_id
 balance
+campaign
+
+Uploaded Schema
+---------------
 age
+balance
+campaign
 credit_score
+customer_segment
+
+Result
+------
++2 Added Columns
 ```
 
-A schema can also change because:
+---
 
-- A column is added
-- A column is removed
-- A data type changes
-- A field is renamed
-- The structure of incoming data changes
+## ⚙️ 5. Feature Engineering Studio
 
-### Why does schema drift matter?
+Automatically engineers business-oriented machine learning features.
 
-Unexpected schema changes can affect:
+### Examples
 
-- Data pipelines
-- Feature engineering
-- Model inference
-- Dashboards
-- Downstream applications
+* Balance bands
+* Campaign intensity
+* Customer segment
+* Loan profile
+* Contact history
+* Interaction features
+* Binary indicators
+
+### Design Principle
+
+Feature engineering is performed consistently during both **training** and **real-time inference**.
 
 ---
 
-# 5. ⚙️ Feature Engineering Studio
+## 🚀 6. Adaptive Retraining & Governance
 
-The Feature Engineering module transforms raw variables into representations that can be used by machine learning models.
+The platform evaluates multiple machine learning algorithms simultaneously.
 
-### Possible transformations
+### Model Arena
 
-- Numerical transformations
-- Categorical representations
-- Binary indicators
-- Business-oriented features
-- Interaction-oriented features
+| Algorithm             | Status |
+| --------------------- | ------ |
+| Logistic Regression   | ✅      |
+| Random Forest         | ✅      |
+| Gradient Boosting     | ✅      |
+| HistGradient Boosting | ✅      |
+| XGBoost               | ✅      |
+| LightGBM              | ✅      |
+| CatBoost              | ✅      |
 
-### Why is feature engineering important?
+### Evaluation Metrics
 
-Good features can improve:
+| Metric            | Purpose                      |
+| ----------------- | ---------------------------- |
+| Accuracy          | Overall correctness          |
+| Precision         | Positive reliability         |
+| Recall            | Positive coverage            |
+| **F1 Score**      | **Primary selection metric** |
+| ROC-AUC           | Secondary ranking metric     |
+| Balanced Accuracy | Class imbalance support      |
 
-- Model performance
-- Model stability
-- Interpretability
-- Business relevance
+### Governance Gate
+
+A new model is promoted only if it satisfies configurable thresholds:
+
+* Minimum F1
+* Minimum ROC-AUC
+* Maximum performance degradation
+* Champion validation
+
+Otherwise, the production model remains active.
 
 ---
 
-# 6. 🚀 Adaptive Retraining & Governance
+## 🔮 7. Real-Time Inference & Explainability
 
-A machine learning model should not always be treated as permanently finished after its initial training.
+Transforms customer attributes into explainable business decisions.
+
+### Input
+
+* Demographics
+* Financial profile
+* Campaign information
+* Previous interactions
+
+### Output
+
+* Prediction
+* Probability
+* Risk category
+* Business priority
+* Customer profile
+* Feature importance
+* Model information
+
+---
+
+# 👤 Customer Intelligence
+
+Every prediction generates an enterprise customer profile.
+
+### Personal
+
+* Age
+* Job
+* Education
+* Marital Status
+
+### Financial
+
+* Balance
+* Housing Loan
+* Personal Loan
+* Default Status
+
+### Campaign
+
+* Contact Method
+* Campaign Count
+* Previous Outcome
+* Previous Contacts
+
+This converts raw ML output into a business-ready customer summary.
+
+---
+
+# 🧠 Adaptive Dataset Workflow
 
 ```text
-Train
-  ↓
-Evaluate
-  ↓
-Compare
-  ↓
-Select
-  ↓
-Deploy
-  ↓
-Monitor
-  ↓
-Retrain
-  ↓
-Evaluate Again
+Production Dataset
+        │
+        ▼
+Download Baseline
+        │
+        ▼
+Upload Candidate CSV
+        │
+        ▼
+Schema Validation
+        │
+        ▼
+Deep Profiling
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Governance Decision
+        │
+        ▼
+Inference
 ```
 
-### Responsibilities
+### Important Behavior
 
-- Model comparison
-- Model evaluation
-- Champion/challenger thinking
-- Retraining
-- Model selection
-- Governance information
-- Model artifact management
+Once a CSV is uploaded:
+
+* All seven modules analyze **the uploaded dataset**
+* Previous reports are replaced
+* Reset restores the original production baseline
 
 ---
 
-# 7. 🔮 Real-Time Inference & Explainability
+# 🛡️ Defensive AI
 
-The final stage converts an input record into a model prediction and interpretable output.
+The platform intentionally blocks unsafe predictions.
 
-### The interface can present
+| Scenario                 | Behavior   |
+| ------------------------ | ---------- |
+| Missing Target           | ❌ Reject   |
+| Wrong Columns            | ❌ Reject   |
+| Unrelated Dataset        | ❌ Reject   |
+| Invalid Schema           | ❌ Reject   |
+| Insufficient Data        | ❌ Reject   |
+| Valid Enterprise Dataset | ✅ Continue |
 
-- Prediction
-- Probability
-- Risk category
-- Decision information
-- Feature importance
-- Explanation
-- Business interpretation
-
-### Why explainability matters
-
-A machine learning system might produce:
-
-```text
-Prediction = 1
-```
-
-But a business user may need to understand:
-
-```text
-What happened?
-
-How confident is the model?
-
-Why did the model make this prediction?
-
-Which features influenced the result?
-
-What should happen next?
-```
+This prevents misleading predictions on incompatible data.
 
 ---
 
-# 🧠 Machine Learning
+# 📈 Model Selection Strategy
 
-The platform evaluates classification models using multiple evaluation metrics:
+Instead of choosing the model with the highest accuracy, the platform follows an enterprise governance policy.
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
+```text
+          MODEL ARENA
+               │
+               ▼
+      F1 Score (Primary)
+               │
+               ▼
+     ROC-AUC (Secondary)
+               │
+               ▼
+    Balanced Accuracy
+               │
+               ▼
+      Governance Gate
+               │
+               ▼
+      Champion Model
+```
 
-A single metric does not always provide a complete picture of model performance. For imbalanced classification problems, accuracy alone may be misleading.
+### Why F1?
+
+The Bank Marketing dataset is imbalanced.
+
+Accuracy alone can reward models that simply predict **No** for most customers.
+
+Therefore:
+
+* **Primary Metric:** F1
+* **Secondary:** ROC-AUC
+* **Supporting:** Accuracy & Balanced Accuracy
+
+---
+
+# 🪵 Enterprise Logging
+
+Every major subsystem generates structured logs.
+
+| Module              | Logged |
+| ------------------- | ------ |
+| Ingestion           | ✅      |
+| Validation          | ✅      |
+| Profiling           | ✅      |
+| Anomaly Detection   | ✅      |
+| Schema Registry     | ✅      |
+| Feature Engineering | ✅      |
+| Training            | ✅      |
+| Governance          | ✅      |
+| Inference           | ✅      |
+
+This enables reproducibility and operational debugging.
+
+---
+
+# 🌙 Enterprise UI
+
+The application follows a dark enterprise dashboard philosophy.
+
+### Principles
+
+* High-contrast typography
+* Readable metric cards
+* Modular navigation
+* Executive KPI ribbon
+* Interactive governance panels
+* Customer intelligence cards
+
+Designed for analyst, engineer, and executive workflows.
 
 ---
 
 # 🏢 Industry Applications
 
-## 🏦 Banking & Financial Services
+## Banking
 
-- Customer response prediction
-- Transaction anomaly detection
-- Risk analytics
-- Data-quality monitoring
-- Customer segmentation
+* Customer response prediction
+* Marketing optimization
+* Risk analytics
+* Data-quality monitoring
 
-## 🏥 Healthcare
+## Healthcare
 
-- Patient-risk prediction
-- Clinical data-quality analysis
-- Anomaly detection
-- ML monitoring
-- Healthcare analytics
+* Patient-risk analytics
+* Clinical data validation
+* Explainable ML workflows
 
-## 🛒 Retail & E-commerce
+## Manufacturing
 
-- Customer analytics
-- Campaign optimization
-- Churn prediction
-- Recommendation workflows
-- Customer response modeling
+* Sensor anomaly detection
+* Predictive maintenance
+* Quality monitoring
 
-## 🏭 Manufacturing
+## Retail
 
-- Sensor anomaly detection
-- Predictive maintenance
-- Quality monitoring
-- Production analytics
-- Operational monitoring
-
-## 📡 Telecommunications
-
-- Churn prediction
-- Customer analytics
-- Network anomaly detection
-- Service optimization
-- Customer behaviour analysis
-
-## 🛡️ Insurance
-
-- Risk prediction
-- Claims anomaly detection
-- Customer segmentation
-- Fraud investigation support
-- Predictive analytics
+* Customer analytics
+* Campaign optimization
+* Response modeling
 
 ---
 
 # 🛠️ Technology Stack
 
-| Area | Technology |
-|---|---|
-| Programming Language | Python |
-| Data Processing | Pandas |
-| Numerical Computing | NumPy |
-| Machine Learning | Scikit-learn |
-| Application Interface | Streamlit |
-| Visualization | Matplotlib / Streamlit |
-| Model Persistence | Joblib |
-| Version Control | Git |
-| Public Showcase | GitHub |
+| Layer             | Technology                    |
+| ----------------- | ----------------------------- |
+| Language          | Python                        |
+| UI                | Streamlit                     |
+| Data              | Pandas                        |
+| Numerical         | NumPy                         |
+| ML                | Scikit-learn                  |
+| Gradient Boosting | XGBoost / LightGBM / CatBoost |
+| Visualization     | Matplotlib                    |
+| Model Persistence | Joblib                        |
+| Version Control   | Git                           |
+| Deployment        | Streamlit Community Cloud     |
 
 ---
 
-# 📸 Platform Screenshots
+# 📊 Project Highlights
 
-Screenshots of the final application will be added to this repository.
-
-## Dashboard Overview
-
-![Dashboard Overview](screenshots/dashboard-overview.png)
-
-## Data Ingestion
-
-![Data Ingestion](screenshots/ingestion.png)
-
-## Deep Data Profiling
-
-![Deep Data Profiling](screenshots/profiling.png)
-
-## Anomaly Intelligence
-
-![Anomaly Intelligence](screenshots/anomaly.png)
-
-## Schema Drift
-
-![Schema Drift](screenshots/schema-drift.png)
-
-## Feature Engineering
-
-![Feature Engineering](screenshots/feature-engineering.png)
-
-## Adaptive Retraining
-
-![Adaptive Retraining](screenshots/retraining.png)
-
-## Real-Time Inference
-
-![Real-Time Inference](screenshots/inference.png)
+| Capability             | Status |
+| ---------------------- | ------ |
+| Data Validation        | ✅      |
+| Deep Profiling         | ✅      |
+| Schema Drift Detection | ✅      |
+| Anomaly Intelligence   | ✅      |
+| Feature Engineering    | ✅      |
+| Multi-Model Arena      | ✅      |
+| Adaptive Retraining    | ✅      |
+| Governance Gates       | ✅      |
+| Explainable AI         | ✅      |
+| Customer Profiling     | ✅      |
+| Defensive Prediction   | ✅      |
+| Enterprise Logging     | ✅      |
 
 ---
 
-# 📚 Documentation
+# 📸 Screenshots
 
-Detailed documentation will be organized into:
-
-- [System Overview](docs/system-overview.md)
-- [Platform Modules](docs/modules.md)
-- [Machine Learning](docs/machine-learning.md)
-- [Explainability](docs/explainability.md)
-- [Deployment](docs/deployment.md)
-- [Architecture](architecture/architecture.md)
-
----
-
-# 🔐 Source Code & Repository Policy
-
-This repository is the **public showcase and documentation repository** for the Enterprise Data Intelligence Platform.
-
-The actual production implementation is maintained separately in a private repository.
-
-This public repository intentionally does not contain:
-
-- Private source code
-- Private model artifacts
-- Private datasets
-- Credentials
-- API keys
-- Internal configuration
-- Sensitive information
-- Proprietary implementation details
-
-The purpose of this repository is to make the project architecture, functionality, documentation, screenshots, and live demonstration publicly accessible without exposing private implementation assets.
+| Module       | Preview                              |
+| ------------ | ------------------------------------ |
+| Dashboard    | `screenshots/dashboard-overview.png` |
+| Profiling    | `screenshots/profiling.png`          |
+| Schema Drift | `screenshots/schema-drift.png`       |
+| Retraining   | `screenshots/retraining.png`         |
+| Inference    | `screenshots/inference.png`          |
 
 ---
 
-# 🌐 Public Project vs Private Source Code
+# 🔐 Repository Strategy
 
-The project follows a two-repository approach.
+This project follows a **two-repository architecture**.
 
 ```text
-                    ENTERPRISE DATA
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │  Private Repository │
-              │                     │
-              │ • Source Code       │
-              │ • Models            │
-              │ • Internal Logic    │
-              │ • Private Data      │
-              │ • Configuration     │
-              └──────────┬──────────┘
-                         │
-                         │ Deployment
-                         ▼
-              ┌─────────────────────┐
-              │   Live Application  │
-              │                     │
-              │   Public Demo       │
-              └──────────┬──────────┘
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │  Public Showcase    │
-              │     Repository      │
-              │                     │
-              │ • Documentation     │
-              │ • Architecture      │
-              │ • Screenshots       │
-              │ • Project Overview  │
-              │ • Demo Link         │
-              └─────────────────────┘
+                 Private Repository
+            ┌────────────────────────┐
+            │ Source Code            │
+            │ ML Pipelines           │
+            │ Model Artifacts        │
+            │ Internal Logic         │
+            └──────────┬─────────────┘
+                       │
+                 Streamlit Deployment
+                       │
+                       ▼
+             Live Enterprise Application
+                       │
+                       ▼
+              Public Showcase Repository
+            ┌────────────────────────┐
+            │ Documentation          │
+            │ Architecture           │
+            │ Screenshots            │
+            │ Live Demo              │
+            └────────────────────────┘
 ```
 
----
+### Private Repository Contains
 
-# ⚠️ Production Considerations
+* Production source code
+* Internal ML implementation
+* Model artifacts
+* Configuration
+* Credentials
 
-This project is an engineering and learning demonstration.
+### Public Repository Contains
 
-A production enterprise deployment would require additional capabilities such as:
-
-- Authentication and authorization
-- Secure secret management
-- Automated testing
-- Centralized logging
-- Model monitoring
-- Data-drift monitoring
-- Model-drift monitoring
-- Experiment tracking
-- Model registry
-- CI/CD
-- API-based serving
-- Database integration
-- Scalability controls
-- Security review
-- Compliance controls
+* Documentation
+* Architecture
+* Screenshots
+* Technical overview
+* Live application link
 
 ---
 
-# 🚀 Future Roadmap
+# 🚀 Production Readiness
 
-Potential future improvements include:
+Current capabilities include:
 
-- SHAP-based local explanations
-- Probability calibration
-- Hyperparameter optimization
-- Cross-validation
-- Automated data-drift detection
-- Automated model-drift detection
-- Experiment tracking
-- REST API serving
-- Docker deployment
-- Cloud-native deployment
-- Role-based access control
-- Automated retraining
-- Advanced decision optimization
-- Production monitoring
-- Automated CI/CD pipelines
+* Enterprise data validation
+* Schema governance
+* Multi-model evaluation
+* Adaptive retraining
+* Explainable inference
+* Logging
+* Streamlit deployment
+
+Future enhancements may include:
+
+* SHAP local explanations
+* Automated drift monitoring
+* Experiment tracking
+* Docker deployment
+* REST API serving
+* CI/CD pipelines
+* RBAC authentication
 
 ---
 
-# 🎓 What This Project Demonstrates
+# 🎓 Skills Demonstrated
 
 ### Data Engineering
 
-- Data ingestion
-- Data validation
-- Data profiling
-- Schema monitoring
-- Data-quality analysis
+* Data ingestion
+* Data validation
+* Schema monitoring
+* Data profiling
 
 ### Machine Learning
 
-- Feature engineering
-- Classification
-- Model comparison
-- Model evaluation
-- Model selection
-- Prediction
+* Feature engineering
+* Classification
+* Model comparison
+* Champion selection
 
-### ML Engineering
+### MLOps
 
-- Model persistence
-- Retraining workflows
-- Model lifecycle concepts
-- Inference workflows
-- Governance concepts
-
-### Explainable AI
-
-- Prediction interpretation
-- Feature importance
-- Business-oriented explanations
-
-### Application Development
-
-- Interactive Streamlit interface
-- Modular platform design
-- Data visualization
-- User-oriented workflow
+* Governance
+* Retraining workflows
+* Model lifecycle
+* Deployment strategy
 
 ### Software Engineering
 
-- Git version control
-- Repository management
-- Public/private repository separation
-- Documentation
-- Deployment planning
-
----
-
-# 💡 Key Learning Outcomes
-
-Working on this project provides experience with:
-
-1. Designing an end-to-end data pipeline.
-2. Understanding enterprise data-quality problems.
-3. Performing exploratory data analysis.
-4. Detecting statistical anomalies.
-5. Understanding schema changes.
-6. Engineering machine-learning features.
-7. Training and evaluating classification models.
-8. Comparing multiple ML algorithms.
-9. Building model retraining workflows.
-10. Understanding ML governance concepts.
-11. Creating inference workflows.
-12. Making model predictions more interpretable.
-13. Building an interactive Streamlit application.
-14. Managing projects using Git and GitHub.
-15. Designing a public project showcase.
-16. Thinking about production ML architecture.
+* Modular architecture
+* Streamlit application design
+* Git & GitHub workflow
+* Enterprise documentation
 
 ---
 
@@ -675,25 +641,12 @@ Working on this project provides experience with:
 
 **Pratim Mistry**
 
-GitHub: https://github.com/pratimmatrix
+* GitHub: https://github.com/pratimmatrix
 
 ---
 
-# ⭐ Project
+# ⭐ Project Status
 
-If you find this project useful or interesting, consider giving the repository a star.
+**Status:** Active Development • Production Showcase
 
----
-
-## 📌 Project Status
-
-**Status:** Active Development / Showcase
-
-The public repository will continue to be updated with:
-
-- Architecture documentation
-- Application screenshots
-- Technical documentation
-- Deployment information
-- Project demonstrations
-- Future improvements
+This repository will continue to evolve with new enterprise capabilities, architecture improvements, and production-quality machine learning workflows.
