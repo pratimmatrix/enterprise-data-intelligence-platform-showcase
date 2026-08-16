@@ -1,4 +1,3 @@
-
 # Enterprise Data Intelligence Platform — Architecture
 
 ## 1. High-Level Architecture
